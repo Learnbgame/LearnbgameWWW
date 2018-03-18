@@ -1,0 +1,179 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	background-color: #000000;
+	margin: 0;
+	font-family: Helvetica, sans-serif;;
+	overflow: hidden;
+}
+
+a {
+	color: #ffffff;
+}
+
+
+
+#menu {
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	text-align: center;
+}
+
+.element {
+	width: 120px;
+	height: 160px;
+	box-shadow: 0px 0px 12px rgba(0,255,255,0.5);
+	border: 1px solid rgba(127,255,255,0.25);
+	text-align: center;
+	cursor: default;
+}
+
+.element:hover {
+	box-shadow: 0px 0px 12px rgba(0,255,255,0.75);
+	border: 1px solid rgba(127,255,255,0.75);
+}
+
+	.element .number {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		font-size: 12px;
+		color: rgba(127,255,255,0.75);
+	}
+
+	.element .symbol {
+		position: absolute;
+		top: 40px;
+		left: 0px;
+		right: 0px;
+		font-size: 60px;
+		font-weight: bold;
+		color: rgba(255,255,255,0.75);
+		text-shadow: 0 0 10px rgba(0,255,255,0.95);
+	}
+
+	.element .details {
+		position: absolute;
+		bottom: 15px;
+		left: 0px;
+		right: 0px;
+		font-size: 12px;
+		color: rgba(127,255,255,0.75);
+	}
+
+button {
+	color: rgba(127,255,255,0.75);
+	background: transparent;
+	outline: 1px solid rgba(127,255,255,0.75);
+	border: 0px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+button:hover {
+	background-color: rgba(0,255,255,0.5);
+}
+button:active {
+	color: #000000;
+	background-color: rgba(0,255,255,0.75);
+}
+
+#alert{
+    display: none;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    width: 80%;
+    height: 80%;
+    background: rgba(0,127,127,0.5);
+    border: 1px solid rgba(127,255,255,0.25);
+    box-shadow: 0 0 12px rgba(0,255,255,0.5);
+    transform: rotateY(0deg) scale(2);
+    opacity: 1;
+    transform-style: preserve-3d;
+    /** 注意：
+     *    1、边距的参照物是宽度 写边距百分比时 --> 参照的是水平宽度
+     *
+     */
+}
+#alert .title,#alert .img,#alert .info,#alert .author {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(127, 255, 255, 0.25);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+    border-radius: 3px;
+}
+#alert .title{
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    width: 50%;
+    height: 15%;
+}
+#alert .title span,#alert .author span{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    transform: translateY(-50%);
+}
+#alert .title span{
+    font-size: 30px;
+}
+#alert .img{
+    overflow: hidden;
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    width: 50%;
+    height: 50%;
+}
+#alert .img img{
+    width: 100%;
+    height: auto;
+}
+#alert .info{
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    width: 35%;
+    height: 35%;
+}
+#alert .info span{
+    position: absolute;
+    top: 5%;
+    padding: 15px;
+}
+#alert .author{
+    position: absolute;
+    right: 5%;
+    bottom: 15%;
+    width: 35%;
+    height: 10%;
+}
+#alert .author span{
+    font-size: 20px;
+}
+#iFrame{
+    width: 25%;
+    height: 100%;
+    border: none;
+}
+#back{
+    position: absolute;
+    right: -80px;
+    bottom: 20px;
+    height: 30px;
+    width: 50px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgba(127,255,255,1);
+    color: rgba(127,255,255,1);
+    border-radius: 3px;
+}
+#back:hover{
+    background: rgba(0,127,127,0.8);
+}
