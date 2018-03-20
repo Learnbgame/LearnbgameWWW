@@ -151,7 +151,7 @@ window.onload = function(){
                             var date = atomData[index] || atomData[0];
                             oAlert.index = index;
                             oATitle.innerHTML = date.Name;
-                     //       oAImg.src = "src/"+date.src+"/index.png";
+                            oAImg.src = "src/"+date.Name+"/index.png";
                      
                             oAInfo.innerHTML = "Num:" + date.Num +"<br>"+"Short_name:" + date.Short_name +"<br>"+"Color:" + date.Color +"<br>"+"radius_used:" + date.radius_used +"<br>"+"radius_covalent:" + date.radius_covalent +"<br>"+"radius_ic:" + date.radius_ic ;
                             oAAuthor.innerHTML = date.Short_name
@@ -225,12 +225,9 @@ window.onload = function(){
         })();
 
         function getNode(node) {
-            if(node.nodeName === "BODY" || node.nodeName === "DIV" || node.nodeName === "UL"){
+            if(node.nodeName === "BODY" || node.nodeName === "DIV" ){
                 return node;
-            }
-            if( node.nodeName === "LI"){
-                return node;
-            } else {
+            }else {
                 return getNode(node.parentNode);
             }
             
