@@ -132,7 +132,7 @@ window.onload = function(){
                 oAImg = oAlert.getElementsByClassName("img")[0].getElementsByTagName("img")[0],
                 oAInfo = oAlert.getElementsByClassName("info")[0].getElementsByTagName("span")[0],
                 oAAuthor = oAlert.getElementsByClassName("author")[0].getElementsByTagName("span")[0];
-         //   var oBWrap = document.getElementById("bg-wrap");
+            var oBWrap = document.getElementById("bg-wrap");
             var oBack = document.getElementById("back");
             var oiFrame = document.getElementById("iFrame");
             //给每一个li加个点击事件，不太合理，这里用事件委托
@@ -148,30 +148,31 @@ window.onload = function(){
                             hide();
                         }else {
                             var index = getNode(target).index;
-                     //       var date = WsbData[index] || WsbData[0];
+                            var date = atomData[index] || atomData[0];
                             oAlert.index = index;
-                      //      oATitle.innerHTML = date.title;
+                            oATitle.innerHTML = date.Name;
                      //       oAImg.src = "src/"+date.src+"/index.png";
-                            oAInfo.innerHTML = "描述："//+date.dec;
-                            oAAuthor.innerHTML = "制作："//+date.author;
+                     
+                            oAInfo.innerHTML = "Num:" + date.Num +"<br>"+"Short_name:" + date.Short_name +"<br>"+"Color:" + date.Color +"<br>"+"radius_used:" + date.radius_used +"<br>"+"radius_covalent:" + date.radius_covalent +"<br>"+"radius_ic:" + date.radius_ic ;
+                            oAAuthor.innerHTML = date.Short_name
                             show();
                         }
                     }
                 }
             };
- /**           oAlert.onclick = function (e) {
-                var date = WsbData[this.index] || WsbData[0];
-                oiFrame.src = "src/"+date.src+"/index.html";
+            oAlert.onclick = function (e) {
+                var date = atomData[this.index] || atomData[0];
+                oiFrame.src = "src/"+date.Name+"/index.html";
                 oBWrap.className = "left";
                 e.cancelBubble = true; // 阻止冒泡
             };
-**/         document.onclick = function () {
+            document.onclick = function () {
                 hide();//li以外点击 alert 弹窗隐藏
             };
-/**            oBack.onclick = function () {
+            oBack.onclick = function () {
                 oBWrap.className = "";
             };
- **/            // Js 动画  显示
+             // Js 动画  显示
             function show() {
                 if(!oAlert.timer){
                     oAlert.timer = true;
