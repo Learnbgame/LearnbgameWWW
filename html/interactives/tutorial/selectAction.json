@@ -1,0 +1,24 @@
+{
+  "title": "selectAction",
+  "publicationStatus": "draft",
+  "subtitle": "",
+  "about": "",
+  "models": [
+    {
+      "type": "md2d",
+      "id": "selectAction$0",
+      "url": "imports/legacy-mw-content/converted/tutorial/selectAction$0.json",
+      "viewOptions": {
+        "controlButtons": "play_reset"
+      }
+    }
+  ],
+  "components": [
+
+  ],
+  "layout": {
+    "bottom": [
+
+    ]
+  }
+}

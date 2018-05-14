@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <title>ZeroGIS</title>
+    <link href="css/ZeroGIS.css" rel="stylesheet" />
+
+    <script src="js/ZeroGIS.js"></script>
+    <script src="js/Enum.js"></script>
+    <script src="js/Utils.js"></script>
+    <script src="js/Vertice.js"></script>
+    <script src="js/Vector.js"></script>
+    <script src="js/Matrix.js"></script>
+    <script src="js/Image.js"></script>
+    <script src="js/Elevation.js"></script>
+
+    <script src="js/Object3D/Object3D.js"></script>
+    <script src="js/Object3D/ShaderContent.js"></script>
+    <script src="js/Object3D/WebGLRenderer.js"></script>
+    <script src="js/Object3D/Line.js"></script>
+    <script src="js/Object3D/PerspectiveCamera.js"></script>
+    <script src="js/Object3D/Object3DComponents.js"></script>
+    <script src="js/Object3D/Scene.js"></script>
+    <script src="js/Object3D/TextureMaterial.js"></script>
+    <script src="js/Object3D/TileMaterial.js"></script>
+    <script src="js/Object3D/Tile.js"></script>
+    <script src="js/Object3D/TileGrid.js"></script>
+
+    <script src="js/MathUtils.js"></script>
+    <script src="js/Event.js"></script>
+    <script src="js/Globe.js"></script>
+
+    <script src="js/TiledLayer/TiledLayer.js"></script>
+    <script src="js/TiledLayer/SubTiledLayer.js"></script>
+    <script src="js/TiledLayer/GoogleTiledLayer.js"></script>
+    <script src="js/TiledLayer/BingTiledLayer.js"></script>
+    <script src="js/TiledLayer/OsmTiledLayer.js"></script>
+    <script src="js/TiledLayer/SosoTiledLayer.js"></script>
+    <script src="js/TiledLayer/TiandituTiledLayer.js"></script>
+    <script src="js/TiledLayer/NokiaTiledLayer.js"></script>
+    <script src="js/TiledLayer/ArcGISTiledLayer.js"></script>
+    <script src="js/TiledLayer/AutonaviTiledLayer.js"></script>
+    <script src="js/TiledLayer/BlendTiledLayer.js"></script>
+
+    <script src="js/index.js"></script>
+</head>
+<body onselectstart="return false;" ondragstart="return false;" oncontextmenu="return false;">
+    <select id="mapSelector">
+        <option value="google">谷歌地图</option>
+        <option value="bing">必应地图</option>
+        <option value="osm">OpenStreetMap</option>
+        <option value="soso">SOSO地图</option>
+        <option value="tianditu">天地图</option>
+    </select>
+    <canvas id="container" width="1000" height="1000" style="cursor:default;"></canvas>
+</body>
+</html>
