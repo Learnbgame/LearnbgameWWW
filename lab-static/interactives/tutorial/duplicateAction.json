@@ -1,0 +1,24 @@
+{
+  "title": "duplicateAction",
+  "publicationStatus": "draft",
+  "subtitle": "",
+  "about": "",
+  "models": [
+    {
+      "type": "md2d",
+      "id": "duplicateAction$0",
+      "url": "imports/legacy-mw-content/converted/tutorial/duplicateAction$0.json",
+      "viewOptions": {
+        "controlButtons": "play_reset"
+      }
+    }
+  ],
+  "components": [
+
+  ],
+  "layout": {
+    "bottom": [
+
+    ]
+  }
+}
