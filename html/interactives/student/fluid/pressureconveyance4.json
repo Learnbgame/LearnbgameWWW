@@ -1,0 +1,24 @@
+{
+  "title": "pressureconveyance4",
+  "publicationStatus": "broken",
+  "subtitle": "",
+  "about": "",
+  "models": [
+    {
+      "type": "md2d",
+      "id": "pressureconveyance4$0",
+      "url": "imports/legacy-mw-content/converted/student/fluid/pressureconveyance4$0.json",
+      "viewOptions": {
+        "controlButtons": "play_reset"
+      }
+    }
+  ],
+  "components": [
+
+  ],
+  "layout": {
+    "bottom": [
+
+    ]
+  }
+}
