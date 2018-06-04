@@ -544,3 +544,9 @@ p span + span {
 #bottom {position: fixed; left: 0; width: 100%; border: 1px; bottom: 0;
                   color: red; background: black; height: 20px;text-align: center}
 #bottom a {color: #202020; width: 200px;}
+
+#svg{
+  background-color: darkseagreen;
+  background: radial-gradient(darkseagreen 0%, black 70%);
+  width: 500px;
+}
