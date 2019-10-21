@@ -1,0 +1,376 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	background: #359398 url("/static/img/learnbgame.png");
+	margin: 0;
+	overflow: hidden;
+}
+
+#canvasOne{
+	z-index: -1;
+	position: absolute;
+}
+
+.search{
+    z-index: 1;
+    position: absolute;
+}
+
+
+
+a {
+    color: #ffffff;
+}
+
+#info {
+    position: absolute;
+    width: 100%;
+    color: #ffffff;
+    padding: 5px;
+    font-family: Monospace;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1;
+}
+
+#menu {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.element {
+    width: 460px;
+    height: 160px;
+    box-shadow: 0px 0px 12px rgba(0,255,255,0.5);
+    border: 1px solid rgba(127,255,255,0.25);
+    text-align: center;
+    cursor: default;
+}
+
+.element:hover {
+    box-shadow: 0px 0px 12px rgba(0,255,255,0.75);
+    border: 1px solid rgba(127,255,255,0.75);
+}
+
+.element .number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 12px;
+    color: rgba(127,255,255,0.75);
+}
+
+.element .symbol {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    right: 0px;
+    font-size: 60px;
+    font-weight: bold;
+    color: rgba(255,255,255,0.75);
+    text-shadow: 0 0 10px rgba(0,255,255,0.95);
+}
+
+.element .details {
+    position: absolute;
+    bottom: 15px;
+    left: 0px;
+    right: 0px;
+    font-size: 12px;
+    color: rgba(127,255,255,0.75);
+}
+
+button {
+    color: rgba(127,255,255,0.75);
+    background: transparent;
+    outline: 1px solid rgba(127,255,255,0.75);
+    border: 0px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgba(0,255,255,0.5);
+}
+button:active {
+    color: #000000;
+    background-color: rgba(0,255,255,0.75);
+}
+
+
+#bottom {position: fixed; left: 0; width: 100%; border: 1px; bottom: 0; background: black; height: 20px;text-align: center}
+#bottom a {color: #202020; width: 200px;}
+
+#wrap{
+    float: left;
+    position: relative;
+    width: 25%;
+    height: 100%;
+    min-width: 600px;
+    background: #000000 
+    perspective: 800px;
+}
+#bg-wrap{
+    width: 400%;
+    height: 100%;
+    margin-left: 0;
+    transition: 1s;
+}
+#bg-wrap.left{
+    margin-left: -100%;
+}
+#menu {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+#alert{
+    display: none;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    width: 80%;
+    height: 80%;
+    background: rgba(0,127,127,0.95);
+    border: 1px solid rgba(127,255,255,0.25);
+    box-shadow: 0 0 12px rgba(0,255,255,0.5);
+    transform: rotateY(0deg) scale(2);
+    opacity: 1;
+    transform-style: preserve-3d;
+    /** 注意：
+     *    1、边距的参照物是宽度 写边距百分比时 --> 参照的是水平宽度
+     *
+     */
+}
+#alert .title,#alert .img,#alert .info,#alert .author {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(127, 255, 255, 0.25);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+    border-radius: 3px;
+}
+#alert .title{
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    width: 50%;
+    height: 15%;
+}
+#alert .title span,#alert .author span{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    transform: translateY(-50%);
+}
+#alert .title span{
+    font-size: 30px;
+}
+#alert .img{
+    overflow: hidden;
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    width: 50%;
+    height: 50%;
+}
+#alert .img img{
+    width: 100%;
+    height: 100%;
+}
+#alert .info{
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    width: 35%;
+    height: 35%;
+}
+#alert .info span{
+    position: absolute;
+    top: 5%;
+    padding: 15px;
+}
+#alert .author{
+    position: absolute;
+    right: 5%;
+    bottom: 15%;
+    width: 35%;
+    height: 10%;
+}
+#alert .author span{
+    font-size: 20px;
+}
+#iFrame{
+    width: 25%;
+    height: 100%;
+    border: none;
+}
+#back{
+    position: absolute;
+    right: -80px;
+    bottom: 20px;
+    height: 30px;
+    width: 50px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgba(127,255,255,1);
+    color: rgba(127,255,255,1);
+    border-radius: 3px;
+}
+#back:hover{
+    background: rgba(0,127,127,0.8);
+}
+
+
+
+
+.search{
+  text-align: right;
+}
+
+.search:before {
+  background: #444;
+  background: -webkit-linear-gradient(left, #151515, #444, #151515);
+  background: -moz-linear-gradient(left, #151515, #444, #151515);
+  background: -o-linear-gradient(left, #151515, #444, #151515);
+  background: -ms-linear-gradient(left, #151515, #444, #151515);
+  background: linear-gradient(left, #151515, #444, #151515);
+  top: 192px;
+}
+
+
+
+#searchMsg {
+  background: linear-gradient(#333, #222);  
+  border: 1px solid #444;
+  border-radius: 5px 0 0 5px;
+  box-shadow: 0 2px 0 #000;
+  color: #888;
+  display: block;
+  float: left;
+  font-family: 'Cabin', helvetica, arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  height: 40px;
+  margin: 0;
+  padding: 0 10px;
+  text-shadow: 0 -1px 0 #000;
+  width: 200px;
+}
+
+
+
+#searchMsgt::-webkit-input-placeholder {
+   color: #888;
+}
+
+#searchMsg:-moz-placeholder {
+   color: #888;
+}
+
+#searchMsg:focus {
+  -webkit-animation: glow 800ms ease-out infinite alternate;
+  -moz-animation: glow 800ms ease-out infinite alternate;
+  -o-animation: glow 800ms ease-out infinite alternate;
+  -ms-animation: glow 800ms ease-out infinite alternate;
+  animation: glow 800ms ease-out infinite alternate;
+  background: #222922;
+  background: -webkit-linear-gradient(#333933, #222922);
+  background: -moz-linear-gradient(#333933, #222922);
+  background: -o-linear-gradient(#333933, #222922);
+  background: -ms-linear-gradient(#333933, #222922);
+  background: linear-gradient(#333933, #222922);
+  border-color: #393;
+  box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #000;
+  color: #efe;
+  outline: none;
+}
+
+#searchMsg:focus::-webkit-input-placeholder { 
+  color: #efe;
+}
+
+#searchMsg:focus:-moz-placeholder {
+  color: #efe;
+}
+
+
+
+#btn:hover,
+#btn:focus {
+  background: #292929;
+  background: -webkit-linear-gradient(#393939, #292929);  
+  background: -moz-linear-gradient(#393939, #292929); 
+  background: -o-linear-gradient(#393939, #292929); 
+  background: -ms-linear-gradient(#393939, #292929);  
+  background: linear-gradient(#393939, #292929);
+  color: #5f5;
+  outline: none;
+}
+
+#btn:active {
+  background: #292929;
+  background: -webkit-linear-gradient(#393939, #292929);
+  background: -moz-linear-gradient(#393939, #292929);
+  background: -o-linear-gradient(#393939, #292929);
+  background: -ms-linear-gradient(#393939, #292929);
+  background: linear-gradient(#393939, #292929);
+  box-shadow: 0 1px 0 #000, inset 1px 0 1px #222;
+  top: 1px;
+}
+
+
+li {
+    list-style: none;
+    padding: 3px;
+}
+#searchMsg{
+        width: 220px;
+height: 34px;
+    vertical-align: top;
+    font-size: 14px;
+    padding-left: 3px;
+}
+li:hover {
+    color: rgba(127,255,255,0.75);
+    cursor: default;
+}
+ul li{
+  margin-top: 0;
+  color: rgba(127,255,255,0.75);
+}
+ul{
+    border: 1px solid #b6b6b6;
+    border-top: 0px;
+    display: none;
+}
+#btn{
+    color: #fff;
+line-height: 38px;
+padding: 0 8px;
+font-size:14px;
+display: inline-block;
+height: 38px;
+
+    cursor: pointer;
+}
+.searchbar{
+        font-size: 0;
+}
+.search{
+    position: fixed;
+left: 50%;
+top: 50%;
+margin-left: 662px;
+margin-top: -446px;
+}

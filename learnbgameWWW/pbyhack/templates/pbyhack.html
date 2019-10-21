@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learnbgame</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/static/css/learnbgame.css">
+    <script src="/static/js/modernizr.min.js"></script>   
+    <script src="/static/js/learnbgame.js"></script> 
+
+    <script src="/static/js/three.js"></script>
+    <script src="/static/js/tween.min.js"></script>
+    <script src="/static/js/TrackballControls.js"></script>
+    <script src="/static/js/CSS3DRenderer.js"></script>
+
+</head>
+<body>
+       
+    <div class="search">
+
+        <div class="searchbar">
+            <input type="text" id="searchMsg" placeholder="What are you looking for?">
+            <span id="btn">search</span>
+        </div>
+        <ul id="list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script src="/static/js/search.js"></script>   
+    <div id="bottom" >
+
+      <a href="http://www.miitbeian.gov.cn">桂ICP备18002133</a>
+    </div>
+
+    <canvas id="canvasOne"  ></canvas>
+    <!--
+    <h1>Learnbgame is learn_by_game</h1>
+    <p>Learnbgame现在是一款正在开发的3D游戏，<br/>
+    游戏主要以数学，物理，化学，生物，地理，天文等科学知识为主要内容，做到learn_by_game。<br/>
+    我们开发的原则是“learn_by_game",“自然”，“真实感强”，</p><br/>
+    <p> 目前网站的部分内容来源于
+    <a href="https://github.com">github</a>
+    仅供学习参考，不做商用
+    </p>
+    <a href="/active">激活</a>
+    <a href="/chemistry">化学</a>
+    -->
+    <div id="bg-wrap">
+        <div id="wrap">     
+            <div id="container"></div>
+            <div id="menu">
+                <button id="table">TABLE</button>
+                <button id="sphere">SPHERE</button>
+                <button id="grid">GRID</button>          
+            </div>
+            <div id="alert">
+                <div class="title"><span></span></div>
+                <div class="img"><img src="" alt=""></div>
+                <div class="info"><span></span></div>
+                <div class="author"><span></span></div>
+            </div>       
+            <div id="back">Back!</div>
+        </div>
+
+        <iframe src="" scrolling="no" id="iFrame"></iframe>             
+    </div>                   
+
+    <script src="/static/js/label.js"></script>
+
+</body>
+</html>
+

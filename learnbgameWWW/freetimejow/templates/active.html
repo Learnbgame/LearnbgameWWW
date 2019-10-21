@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learnbgame激活</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/static/css/active.css">
+	
+
+</head>
+
+<body>
+	<h1>Learnbgame 激活系统</h1>
+	<form action="/active/" method="post">
+		{% csrf_token %}
+		用户名： <input type="text" name="username"/><br/>
+		密码： <input type="password" name="password"/><br/>
+		身份证号：<input type="text" name="userid"><br/>
+		<input type="submit" value="提交">
+	</form>
+	<table border="1">
+		<thead>
+			<tr>用户名</tr>
+			<tr>密码</tr>
+			<tr>ID</tr>			
+		</thead>
+		<tbody>
+			{% for item in data %}		
+			<tr>
+				<td>{{item.user}}</td>
+				<td>{{item.pwd}}</td>
+				<td>{{item.userid}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+    <p>Learnbgame现在是一款正在开发的3D游戏，<br/>
+    游戏主要以数学，物理，化学，生物，地理，天文等科学知识为主要内容，做到learn_by_game。<br/>
+    我们开发的原则是“learn_by_game",“自然”，“真实感强”，</p><br/>
+    <p> 目前网站的部分内容来源于
+    <a href="https://github.com">github</a>
+    仅供学习参考，不做商用
+    </p>
+</body>
+</html>>
